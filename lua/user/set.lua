@@ -1,0 +1,3 @@
+vim.opt.nu = false
+
+
