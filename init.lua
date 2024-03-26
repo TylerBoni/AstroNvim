@@ -16,6 +16,7 @@ if astronvim.default_colorscheme then
     require("astronvim.utils").notify(
       ("Error setting up colorscheme: `%s`"):format(astronvim.default_colorscheme),
       vim.log.levels.ERROR
+
     )
   end
 end
@@ -32,3 +33,5 @@ require("lspconfig").clangd.setup {
     "--offset-encoding=utf-16",
   },
 }
+-- Make the background transparent
+vim.cmd("highlight Normal guibg=NONE ctermbg=NONE")
